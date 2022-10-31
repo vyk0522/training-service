@@ -28,6 +28,7 @@ public class Passport {
     @Column(name = "issued_at", nullable = false)
     private LocalDateTime issuedAt;
 
+    // Bi Directional
     @OneToOne(mappedBy = "passport", orphanRemoval = true)
     private Student student;
 
