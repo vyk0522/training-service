@@ -28,7 +28,7 @@ public class Passport {
     @Column(name = "issued_at", nullable = false)
     private LocalDateTime issuedAt;
 
-    // Bi Directional
+    // Bi Directional - mappedBy doesn't create student_id column in Passport table but uses already existing foreign key in Student table.
     @OneToOne(mappedBy = "passport", orphanRemoval = true)
     private Student student;
 
